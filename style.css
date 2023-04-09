@@ -2,4 +2,184 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    
+}
+
+header {
+    font-weight: 600;
+    height: 10vh;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.purple {
+    color: rebeccapurple;
+}
+
+main .top {
+    height: 90vh;
+    padding: 0 2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 5em;
+}
+
+main .top h1 {
+    font-size: 4rem;
+}
+
+main .top p {
+    font-size: 1rem;
+    padding-bottom: 1em;
+}
+
+main .top .btns button {
+    padding: 1em 2em;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+main .top .btns button:first-child {
+    margin-right: 1em;
+}
+
+main .top .btns button:hover, main .top .btns button:focus {
+    transform: translateY(10%);
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    border: none;
+}
+
+main .about {
+    background-color: rgb(16, 2, 31);
+    color: white;
+    padding: 1em 2em;
+}
+
+main .about h1 {
+    font-size: 3rem;
+    color: rgb(69, 15, 124);
+}
+
+
+main .about p {
+    font-size: 1rem;
+    line-height: 40px;
+}
+
+main .about p:first-child {
+    margin: 1em 0;
+}
+
+main .about p:last-child {
+    margin: 1em 0;
+}
+
+main .projects {
+    height: 100vh;
+    padding: 0 2em;
+}
+
+main .projects h1 {
+    font-size: 3rem;
+    color: rgb(69, 15, 124);
+}
+
+main .contact {
+    padding: 1em 2em;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+}
+
+main .contact h1 {
+    font-size: 3rem;
+    color: rgb(69, 15, 124);
+}
+
+main .contact p {
+    font-size: 1rem;
+}  
+
+main .contact p a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+main .contact p:first-child {
+    margin: 1em 0;
+}
+
+main .contact p:last-child {
+    margin: 1em 0;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 2, 31);
+    color: whitesmoke;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    main .top h1 {
+        font-size: 8rem;
+    }
+
+    main .top p {
+        font-size: 1.3rem;
+    }
+
+    main .top .btns button {
+        padding: 1.5em 3em;
+    }
+
+    main .top .btns button:first-child {
+        margin-right: 2em;
+    }
+
+    main .about {
+        padding: 4em 2em;
+    }
+
+    main .about p {
+        font-size: 1.2rem;
+    }
+
+
+
+
+    main .contact p {
+        font-size: 1.2rem;
+    }
+
+}
+
