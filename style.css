@@ -32,7 +32,7 @@ main .top {
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding-top: 5em;
+    padding-top: 7em;
 }
 
 main .top h1 {
@@ -148,6 +148,10 @@ footer {
 
     .logo {
         font-size: 1.3rem;
+    }
+
+    main .top {
+        padding-top: 5em;
     }
     
     main .top h1 {
