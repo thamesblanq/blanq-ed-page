@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 
 
@@ -23,6 +24,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.801);
 }
 
 .purple {
@@ -56,25 +60,31 @@ main .top p {
 }
 
 main .top .btns button {
-    padding: 0.75em 1.5em;
-    border: 1px solid black;
-    background-color: whitesmoke;
-    color: black;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
+    border: none;
+    margin-top: 1em;
     transition: all 1s ease-in-out;
 }
 
 main .top .btns button:first-child {
-    margin-right: 0.5em;
+    margin-right: 0.3em;
 }
 
-main .top .btns button:hover, main .top .btns button:focus {
-    transform: translateY(10%);
+main .top .btns button:hover a, main .top .btns button:focus a {
     background-color: rebeccapurple;
     color: whitesmoke;
     border: none;
+}
+
+main .top .btns button a {
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    color: black;
 }
 
 main .about {
@@ -90,8 +100,9 @@ main .about h1 {
 
 
 main .about p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 40px;
+    border-bottom: 1px solid whitesmoke;
 }
 
 main .about p:first-child {
@@ -102,8 +113,40 @@ main .about p:last-child {
     margin: 1em 0;
 }
 
+main .stack {
+    padding: 2em 2em;
+    background-color: rgb(16, 2, 31);
+}
+
+main .stack h1 {
+    font-size: 3rem;
+    color: rgb(69, 15, 124);
+}
+
+main .stack .stack-language {
+    display: grid;
+    gap: 1em;
+    
+}
+
+main .stack .stack-language button {
+    padding: 0.75em 1.5em;
+    border: 1px solid whitesmoke;
+    background-color: rgba(0, 0, 0, 0);
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+main .stack .stack-language button:hover, main .stack .stack-language button:focus, main .stack .stack-language button:active {
+    border: 2px solid rgb(69, 15, 124);
+}
+
 main .projects {
     padding: 0 2em;
+    background-color: rgb(16, 2, 31);
 }
 
 main .projects h1 {
@@ -114,9 +157,12 @@ main .projects h1 {
 main .projects .work {
     width: 100%;
     height: 60vh;
-    margin: 1em 0;
     padding: 1em;
     transition: all 1s ease-in-out;
+}
+
+main .projects .work:last-child {
+    padding-bottom: 2em;
 }
 
 main .projects .work img {
@@ -126,13 +172,14 @@ main .projects .work img {
 }
 
 main .projects .work h5 {
-    background-color: rgb(16, 2, 31);
+    background-color: rgba(0, 0, 0, 0.384);
     color: whitesmoke;
     font-weight: 600;
-    font-size: 1.2rem;
-    padding: 0.5em;
-    height: 10%;
+    font-size: 1.1rem;
+    padding: 1em;
+    height: 15%;
     display: none;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -142,34 +189,50 @@ main .projects .work:hover h5, main .projects .work:focus h5 {
 
 main .contact {
     padding: 1em 2em;
-    background-color: rebeccapurple;
+    background-color: whitesmoke;
     color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
 }
 
 main .contact h1 {
     font-size: 3rem;
     color: rgb(69, 15, 124);
+    text-align: center;
 }
 
-main .contact p {
-    font-size: 1rem;
+main .contact .container {
+    width: 80%;
+    height: 80%;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgb(69, 15, 124);
+}
+
+main .contact .container p {
+    font-size: 0.7rem;
 }  
 
-main .contact p a {
+main .contact .container p a {
     color: whitesmoke;
     text-decoration: none;
 }
 
-main .contact p:first-child {
+main .contact .container p:first-child {
     margin: 1em 0;
 }
 
-main .contact p:last-child {
+main .contact .container p:last-child {
     margin: 1em 0;
 }
 
 footer {
     height: 10vh;
+    text-align: center;
+    font-size: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,6 +248,10 @@ footer {
 
 @media screen and (min-width: 768px){
 
+    header {
+        padding: 0 4em;
+    }
+
     .logo {
         font-size: 1.3rem;
     }
@@ -192,37 +259,70 @@ footer {
     main .top {
         align-items: center;
         justify-content: center;
+        padding: 0 4em;
     }
     
     main .top h1 {
         font-size: 8rem;
+        font-weight: 800;
     }
 
     main .top p {
         font-size: 1.3rem;
     }
 
-    main .top .btns button {
-        padding: 1.5em 3em;
-    }
+    /* main .top .btns button {
+        
+    } */
 
     main .top .btns button:first-child {
         margin-right: 2em;
     }
 
+    main .top .btns button a {
+        padding: 1.5em 3em;
+    }
+
     main .about {
-        padding: 4em 2em;
+        padding: 4em 4em;
     }
 
     main .about p {
         font-size: 1.2rem;
     }
 
+    main .projects {
+        padding: 0 4em;
+    }
+
+    main .stack {
+        padding: 2em 4em;
+    }
+
+    main .stack .stack-language {
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+
+    main .contact {
+        padding: 1em 4em;
+    }
+
+    main .contact .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
 
 
-    main .contact p {
-        font-size: 1.2rem;
+
+    main .contact .container p {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1rem;
     }
 
 }
