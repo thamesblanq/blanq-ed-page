@@ -45,6 +45,7 @@ main .top {
     justify-content: flex-start;
     flex-direction: column;
     padding-top: 3em;
+    scroll-behavior: smooth;
 }
 
 main .top h1 {
@@ -85,6 +86,41 @@ main .top .btns button a {
     border: 1px solid black;
     background-color: whitesmoke;
     color: black;
+}
+
+main .up {
+    border: none;
+    position: fixed;
+    bottom: 4em;
+    right: 0.5em;
+    outline: none;
+    animation-name: up;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+main .up a {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1em;
+    color: whitesmoke;
+    background-color: rgb(69, 15, 124);
+    font-size: 1rem;
+    border-radius: 100px;
+    scroll-behavior: smooth;
+}
+
+@keyframes up {
+    0%{
+        transform: translateY(-10%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(10%);
+    }
 }
 
 main .about {
@@ -281,6 +317,10 @@ footer {
 
     main .top .btns button a {
         padding: 1.5em 3em;
+    }
+
+    main .up a {
+        font-size: 1.2rem;
     }
 
     main .about {
