@@ -151,6 +151,8 @@ main .about p:last-child {
 
 main .stack {
     padding: 2em 2em;
+    width: 100%;
+    overflow: hidden;
     background-color: rgb(16, 2, 31);
 }
 
@@ -161,7 +163,9 @@ main .stack h1 {
 
 main .stack .stack-language {
     display: grid;
-    gap: 1em;
+    gap: 0.5em;
+    grid-auto-columns: 1fr 2fr;
+
     
 }
 
@@ -173,7 +177,7 @@ main .stack .stack-language button {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 main .stack .stack-language button:hover, main .stack .stack-language button:focus, main .stack .stack-language button:active {
@@ -181,7 +185,7 @@ main .stack .stack-language button:hover, main .stack .stack-language button:foc
 }
 
 main .projects {
-    padding: 0 2em;
+    padding: 2em 2em;
     background-color: rgb(16, 2, 31);
 }
 
@@ -194,11 +198,23 @@ main .projects .work {
     width: 100%;
     height: 60vh;
     padding: 1em;
+    background-image: url(aaje.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 1s ease-in-out;
 }
 
+main .projects .work:first-child {
+    margin: 2em 0;
+}
+
+main .projects .work:nth-child(2) {
+    margin: 2em 0;
+}
+
 main .projects .work:last-child {
-    padding-bottom: 2em;
+    margin: 2em 0;
 }
 
 main .projects .work img {
@@ -332,7 +348,7 @@ footer {
     }
 
     main .projects {
-        padding: 0 4em;
+        padding: 2em 4em;
     }
 
     main .stack {
